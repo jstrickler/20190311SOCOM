@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 """
-
-@author: jstrick
-Created on Wed Mar 20 21:17:01 2013
-
+Get the date of last modification for files specified on the command line
 """
 import sys
 import os

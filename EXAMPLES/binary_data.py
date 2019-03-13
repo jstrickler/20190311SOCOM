@@ -2,7 +2,7 @@
 
 from struct import Struct
 
-values = 7, 6, 42.3, b'Guido' # <1>
+values = 7, 6, 42.3, b'Giannina' # <1>
 
 demo = Struct('iif10s')  # <2>
 

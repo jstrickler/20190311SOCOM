@@ -14,7 +14,7 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 6:
     print(f"Name is [{name:>10s}]")  # <2>
     print(f"count is {count:03d} avg is {avg:.2f}")  # <3>
 
-    print(f"info is {info} {info:d} {info:o} {info:x}".format(info))  # <4>
+    print(f"info is {info} {info:d} {info:o} {info:x}")  # <4>
 
     print(f"${result:,d}".format(result))  # <5>
 

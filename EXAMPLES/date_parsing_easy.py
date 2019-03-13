@@ -14,6 +14,7 @@ date_strings = [  # <1>
     '4/1/2015 8:09 PM',
     'Apr 1, 2015 5 AM',
     'Apricot 4, 341',
+    'February 30, 1986',
 ]
 
 for date_string in date_strings:

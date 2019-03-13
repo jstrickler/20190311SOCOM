@@ -30,28 +30,36 @@ FOLDER = 'DATA'
 FILE = 'mary.txt'
 
 # file_path = FOLDER + os.sep + FILE
-file_path = os.path.join(FOLDER, FILE)
+def main():
+    """
+    Whatever works.
 
-print(file_path)
+    :return:
+    """
+    file_path = os.path.join(FOLDER, FILE)
 
-print(os.path.dirname(file_path))
-print(os.path.basename(file_path))
-print(os.path.abspath(file_path))
+    print(file_path)
 
-file_size = os.path.getsize(file_path)
-print("file size:", file_size)
+    print(os.path.dirname(file_path))
+    print(os.path.basename(file_path))
+    print(os.path.abspath(file_path))
 
-s = os.stat(file_path)
-print(s)
+    file_size = os.path.getsize(file_path)
+    print("file size:", file_size)
 
-raw_timestamp = os.path.getmtime(file_path)
-print("raw timestamp:", raw_timestamp)
-timestamp = datetime.fromtimestamp(raw_timestamp)
-print("timestamp:", timestamp)
+    s = os.stat(file_path)
+    print(s)
 
-for f in "mary.txt", "alice.txt", "mimi.txt":
-    file_path = os.path.join('DATA', f)
-    print(f, os.path.exists(file_path))
+    raw_timestamp = os.path.getmtime(file_path)
+    print("raw timestamp:", raw_timestamp)
+    timestamp = datetime.fromtimestamp(raw_timestamp)
+    print("timestamp:", timestamp)
+
+    for f in "mary.txt", "alice.txt", "mimi.txt":
+        file_path = os.path.join('DATA', f)
+        print(f, os.path.exists(file_path))
 
 
 
+if __name__ == '__main__':
+    main()
