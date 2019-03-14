@@ -17,13 +17,17 @@ def main(args):
         sys.exit(1)
 
     response = requests.get(
-        BASE_URL + args[0],
-        params={'key': API_KEY},
+        BASE_URL + args[0], timeout=10,
+        params={'key': API_KEY},  # ...?KEY=VALUE&KEY=V
+        # auth=(token, pw),
+        # headers={'h1':'value', 'h2': 'value'},
+        # proxy={},
+
     )  # <3>
 
     if response.status_code == requests.codes.OK:
-        # pprint(response.content.decode())
-        # print('-' * 60)
+        pprint(response.content.decode())
+        print('-' * 60)
         data = response.json()  # <4>
         for entry in data: # <5>
             if isinstance(entry, dict):

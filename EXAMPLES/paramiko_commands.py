@@ -1,8 +1,10 @@
 #!/usr/bin/env python
-
+import os
 import paramiko
 
 with paramiko.SSHClient() as ssh:  # <1>
+
+    password = os.getenv('FOO_PASSWORD')
 
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())  # <2>
 

@@ -3,7 +3,8 @@
 Fetch a word definition from Merriam-Webster's API
 """
 import sys
-from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen, quote
+
 import json
 # from pprint import pprint
 
@@ -19,6 +20,7 @@ def main(args):
         sys.exit(1)
 
     search_term = args[0].replace(' ', '+')
+    search_term = quote(search_term)
 
     url = URL_TEMPLATE.format(search_term, API_KEY)  # <2>
 
