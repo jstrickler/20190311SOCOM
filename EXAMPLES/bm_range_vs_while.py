@@ -2,12 +2,20 @@
 
 import timeit
 
-setup_code = 'values = []'  # <1>
+junk = 5
+
+setup_code = '''
+import foo
+from __main__ import junk
+print(junk)
+values = []  # <1>
+'''
 
 test_code_one = '''
 for i in range(10000):
     values.append(i)
 '''  # <2>
+
 test_code_two = '''
 i = 0
 while i < 10000:

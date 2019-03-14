@@ -20,13 +20,13 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 
 project = 'My Beautiful Project'
-copyright = '2019, John'
-author = 'John'
+copyright = '2019, Bill H. Gates'
+author = 'Bill H. Gates'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = '5.9'
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,7 +41,6 @@ release = '1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinx.ext.coverage',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
 ]
@@ -79,8 +78,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'classic'
-# agogo classic alabaster scrolls pyramid haiku nature
+html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -135,7 +133,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'MyBeautifulProject.tex', 'My Beautiful Project Documentation',
-     'John', 'manual'),
+     'Bill H. Gates', 'manual'),
 ]
 
 

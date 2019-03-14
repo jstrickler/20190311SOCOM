@@ -1,79 +1,79 @@
 #!/usr/bin/env python
+"""
+Examples of string usage.
+"""
+import logging
+import sys
 
-actor = "Tom Cruise"
+logging.basicConfig(
+    level=logging.INFO,
+    stream=sys.stderr,
+)
 
-print(actor.lower())
-print(actor.split())
-print(len(actor))
+ACTOR = "Tom Cruise"
 
-__builtins__.print(__builtins__.len(actor))
+print(ACTOR.lower())
+print(ACTOR.split())
+print(len(ACTOR))
 
+# __builtins__.print(__builtins__.len(ACTOR))
+logging.info("I am here")
 print(dir(__builtins__))
 
-x = "spam\n"
+X = "spam\n"
 
-x = x.rstrip()
+X = X.rstrip()
 
-print(x == 'spam')
+print(X == 'spam')
 
-fruits = ["pomegranate", "cherry", "apricot", "apple",
-"lemon", "kiwi", "orange", "lime", "watermelon", "guava",
-"papaya", "fig", "pear", "banana", "tamarind", "persimmon",
-"elderberry", "peach", "blueberry", "lychee", "grape", "date" ]
+FRUITS = ["pomegranate", "cherry", "apricot", "apple",
+          "lemon", "kiwi", "orange", "lime", "watermelon", "guava",
+          "papaya", "fig", "pear", "banana", "tamarind", "persimmon",
+          "elderberry", "peach", "blueberry", "lychee", "grape", "date"]
 
-print(fruits[0:3])
-print(fruits[4:9])
-
-print(fruits[-1])
-
-print(fruits[-5:])
-
-print(fruits[-10:-5])
+print(FRUITS[0:3])
+print(FRUITS[4:9])
+logging.error("UH OH!!!")
 
 
-print(fruits[:3])
-print(len(fruits))
+print(FRUITS[-1])
 
-print(fruits[len(fruits) - 1])
+print(FRUITS[-5:])
 
+print(FRUITS[-10:-5])
+logging.warning("foobar")
 
-x = slice(3, 8)
-print(fruits[x])
-
-y = slice(3, None)
-print(fruits[y])
-
-x = b"abcdefghij"
-
-print(x[::2])
-
-x = ['Va Beach', 'Hampton', 'Portsmouth']
-
-y = ['Norfolk', 'Suffolk']
-
-x.extend(y)
-
-
-print(x)
-
-
-x.extend('spam')
-x.extend(['spam'])
-
-print(x)
+logging.debug("debug message")
 
 
 
+print(FRUITS[:3])
+print(len(FRUITS))
+
+print(FRUITS[len(FRUITS) - 1])
 
 
+X = slice(3, 8)
+print(FRUITS[X])
+
+Y = slice(3, None)
+print(FRUITS[Y])
+
+X = b"abcdefghij"
+
+print(X[::2])
+
+X = ['Va Beach', 'Hampton', 'Portsmouth']
+
+Y = ['Norfolk', 'Suffolk']
+
+X.extend(Y)
 
 
+print(X)
 
 
+X.extend('spam')
+X.extend(['spam'])
 
-
-
-
-
-
-
+print(X)

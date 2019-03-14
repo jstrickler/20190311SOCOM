@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import random
 
 class CardDeck():
     SUITS = 'C D H S'.split()
@@ -19,6 +20,13 @@ class CardDeck():
     def cards(self):
         return self._cards
 
+    def draw(self):
+        if len(self) == 0:
+            raise ValueError("No more cards!")
+        return self._cards.pop()
+
+    def __len__(self):
+        return len(self._cards)
 
     @property
     def dealer(self):
@@ -34,6 +42,9 @@ class CardDeck():
     @classmethod
     def get_ranks(cls):
         return cls.RANKS
+
+    def shuffle(self):
+        random.shuffle(self._cards)
 
 if __name__ == '__main__':
     d1 = CardDeck("Bob")

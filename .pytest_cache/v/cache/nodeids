@@ -1,0 +1,5 @@
+[
+  "test_carddeck.py::TestCardDeck::test_deck_has_52_cards",
+  "test_carddeck.py::TestCardDeck::test_empty_deck_raises_error",
+  "test_carddeck.py::TestCardDeck::test_shuffling_preserves_cards"
+]
