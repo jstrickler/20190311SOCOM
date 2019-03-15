@@ -11,8 +11,9 @@ with open('../DATA/words.txt') as words_in:
 random.shuffle(WORDS)  # <3>
 
 
-def my_task(word):  # <4>
-    return word.upper()
+def my_task(info):  # <4>
+    # info.func(*info.args)
+    return info.upper()
 
 
 if __name__ == '__main__':

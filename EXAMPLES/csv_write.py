@@ -10,7 +10,7 @@ data = (
 
 with open('../TEMP/stuff.csv', 'w') as STUFF:
     if sys.platform == 'win32':
-        wtr = csv.writer(STUFF, lineterminator='\n') # <1>
+        wtr = csv.writer(STUFF, lineterminator='\n', quoting=csv.Q) # <1>
     else:
         wtr = csv.writer(STUFF) # <1>
     for row in data:

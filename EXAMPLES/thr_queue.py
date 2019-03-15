@@ -34,7 +34,7 @@ class Worker(Thread):  # <4>
         while True:
             try:
                 s1 = q.get(block=False)  # <7>
-                s2 = s1.upper() + '-' + s1.upper()
+                s2 = s1.upper()
                 with shlist_lock:  # <8>
                     shared_list.append(s2)
 
